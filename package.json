@@ -15,5 +15,11 @@
   "bugs": {
     "url": "https://github.com/ninoxin/repair-design/issues"
   },
-  "homepage": "https://github.com/ninoxin/repair-design#readme"
+  "homepage": "https://github.com/ninoxin/repair-design#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  },
+  "dependencies": {
+    "browser-sync": "^2.26.14"
+  }
 }
