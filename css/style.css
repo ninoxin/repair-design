@@ -341,6 +341,20 @@ template {
     background-color: #E3B873;
     color: #fff; }
 
+@font-face {
+  font-family: 'Futura Demi';
+  src: url("../fonts/furura/FuturaDemi.woff") format("woff"), url("../fonts/furura/FuturaDemi.woff2") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: wrap; }
+
+@font-face {
+  font-family: 'Futura Book';
+  src: url("../fonts/furura/FuturaBook.woff") format("woff"), url("../fonts/furura/FuturaBook.woff2") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: wrap; }
+
 body {
-  font-family: sans-serif;
+  font-family: 'Futura Book' , sans-serif;
   font-size: 14px; }
