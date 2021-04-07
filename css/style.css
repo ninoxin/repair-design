@@ -1,3 +1,17 @@
+@font-face {
+  font-family: 'Futura Demi';
+  src: url("../fonts/furura/FuturaDemi.woff") format("woff"), url("../fonts/furura/FuturaDemi.woff2") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: wrap; }
+
+@font-face {
+  font-family: 'Futura Book';
+  src: url("../fonts/furura/FuturaBook.woff") format("woff"), url("../fonts/furura/FuturaBook.woff2") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: wrap; }
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -303,6 +317,52 @@ template {
 [hidden] {
   display: none; }
 
+.button {
+  padding: 13px 20px;
+  border: none;
+  border-radius: 2px;
+  text-transform: uppercase; }
+  .button:hover {
+    cursor: pointer; }
+  .button--primary {
+    background-color: #E3B873;
+    color: #fff;
+    box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.2);
+    transition: box-shadow 0.3s; }
+    .button--primary:hover {
+      box-shadow: none; }
+  .button--outline {
+    border: 1px solid #fff;
+    background-color: transparent;
+    color: #fff; }
+
+.container {
+  max-width: 1256px;
+  width: 100%;
+  margin: auto; }
+
+*, *:after, *:before {
+  box-sizing: border-box; }
+
+body {
+  font-family: 'Futura Book' , sans-serif;
+  font-size: 14px; }
+
+.section-title {
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'Yeseva One' , cursive; }
+  .section-title__image {
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .section-title__image::after, .section-title__image::before {
+      content: '';
+      width: 32px;
+      height: 2px;
+      background-color: #E3B873;
+      margin: 0 10px; }
+
 .header {
   position: fixed;
   left: 0;
@@ -416,48 +476,3 @@ template {
   font-size: 40px; }
   .title--primary {
     color: #E3B873; }
-
-.container {
-  max-width: 1256px;
-  width: 100%;
-  margin: auto; }
-
-.button {
-  padding: 13px 20px;
-  border: none;
-  border-radius: 2px;
-  text-transform: uppercase; }
-  .button:hover {
-    cursor: pointer; }
-  .button--primary {
-    background-color: #E3B873;
-    color: #fff;
-    box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.2);
-    transition: box-shadow 0.3s; }
-    .button--primary:hover {
-      box-shadow: none; }
-  .button--outline {
-    border: 1px solid #fff;
-    background-color: transparent;
-    color: #fff; }
-
-@font-face {
-  font-family: 'Futura Demi';
-  src: url("../fonts/furura/FuturaDemi.woff") format("woff"), url("../fonts/furura/FuturaDemi.woff2") format("woff");
-  font-weight: normal;
-  font-style: normal;
-  font-display: wrap; }
-
-@font-face {
-  font-family: 'Futura Book';
-  src: url("../fonts/furura/FuturaBook.woff") format("woff"), url("../fonts/furura/FuturaBook.woff2") format("woff");
-  font-weight: normal;
-  font-style: normal;
-  font-display: wrap; }
-
-*, *:after, *:before {
-  box-sizing: border-box; }
-
-body {
-  font-family: 'Futura Book' , sans-serif;
-  font-size: 14px; }
