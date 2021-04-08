@@ -616,4 +616,48 @@ img {
 
 @media screen and (max-width: 1200px) {
   html {
-    font-size: 12px; } }
+    font-size: 12px; }
+  .navitem {
+    margin-left: 1rem; } }
+
+@media screen and (max-width: 992px) {
+  .heroinstagram {
+    display: none; }
+  .herocontent {
+    margin-left: 0; }
+  .nav {
+    display: none; } }
+
+@media screen and (max-width: 760px) {
+  .row {
+    flex-direction: column;
+    align-items: center; }
+  .typescard {
+    margin-bottom: 4.28rem; }
+  .types .cardtext {
+    margin-left: 0; } }
+
+@media screen and (max-width: 570px) {
+  .contactsphone {
+    margin-right: 0;
+    color: #fff;
+    text-decoration: none; }
+  .contactsbutton {
+    display: none; }
+  .title {
+    font-size: 1.64rem; }
+  .heroscroll-down {
+    display: none; }
+  .herocontent {
+    max-width: 22.86rem; }
+  .herotext {
+    font-size: 1.29rem;
+    margin-bottom: 2.28rem; }
+  .herobutton {
+    display: block;
+    min-width: 22.86rem;
+    margin-bottom: 1.85rem; } }
+
+@media screen and (max-height: 520px) {
+  .heroscroll-down {
+    display: none; } }

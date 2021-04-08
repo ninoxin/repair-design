@@ -1,4 +1,50 @@
-@media screen and ( max-width: 1200px )
-    html
-        font-size: 12px
-    
+@media screen and ( max-width: 1200px  )
+  html
+    font-size: 12px
+  .nav
+    &item
+      margin-left: 1rem
+@media screen and ( max-width: 992px  )
+  .hero
+    &instagram
+      display: none
+    &content
+      margin-left: 0
+  .nav
+    display: none
+@media screen and ( max-width: 760px )
+  .row
+    flex-direction: column
+    align-items: center
+  .types
+    &card
+      margin-bottom: 4.28rem
+    .card
+      &text
+        margin-left: 0
+@media screen and ( max-width: 570px  )
+  .contacts
+    &phone
+      margin-right: 0
+      color: $light
+      text-decoration: none
+    &button
+      display: none
+  .title
+    font-size: 1.64rem
+  .hero
+    &scroll-down
+      display: none
+    &content
+      max-width: 22.86rem
+    &text
+      font-size: 1.29rem
+      margin-bottom: 2.28rem
+    &button
+      display: block
+      min-width: 22.86rem
+      margin-bottom: 1.85rem
+@media screen and ( max-height: 520px  )
+  .hero
+    &scroll-down
+      display: none
