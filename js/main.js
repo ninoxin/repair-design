@@ -12,7 +12,7 @@ $(document).ready(function () {
 });
 
 $(document).keyup(function (e) {
-    if (e.key === "Escape" || e.keyCode === 27) {
+    if (e.keyCode === 27) {
         modal.toggleClass('modal--visible');
     }
 });
