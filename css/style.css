@@ -372,6 +372,17 @@ template {
   width: 100%;
   margin: auto; }
 
+.row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between; }
+
+.col-30 {
+  flex-basis: 30%; }
+
+.col-50 {
+  width: 50%; }
+
 *, *:after, *:before {
   box-sizing: border-box; }
 
@@ -385,20 +396,45 @@ body {
 img {
   max-width: 100%; }
 
-.section-title {
-  text-align: center;
+.section--dark {
+  background-color: #131313;
+  color: #fff; }
+
+.section-title__text {
+  font-size: 1.28rem;
+  line-height: 2.07rem;
+  max-width: 31.57rem; }
+
+.section-title--left {
+  text-align: left; }
+
+.section-title__heading {
   text-transform: uppercase;
-  font-family: 'Yeseva One' , cursive; }
-  .section-title__image {
-    display: flex;
-    align-items: center;
-    justify-content: center; }
-    .section-title__image::after, .section-title__image::before {
-      content: '';
-      width: 32px;
-      height: 2px;
-      background-color: #E3B873;
-      margin: 0 10px; }
+  font-family: 'Yeseva One' , cursive;
+  line-height: 138%; }
+  .section-title__heading--primary {
+    color: #E3B873; }
+
+.section-title__word {
+  display: flex;
+  align-items: center; }
+  .section-title__word::after {
+    content: '';
+    width: 90px;
+    height: 2px;
+    background-color: #E3B873;
+    margin-left: 2rem; }
+
+.section-title__image {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .section-title__image::after, .section-title__image::before {
+    content: '';
+    width: 32px;
+    height: 2px;
+    background-color: #E3B873;
+    margin: 0 10px; }
 
 .header {
   position: fixed;
@@ -450,6 +486,15 @@ img {
     width: 100%;
     height: 100%;
     background-color: rgba(19, 19, 19, 0.7); }
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 3.46rem;
+    background-color: #131313; }
   .hero__content {
     position: relative;
     max-width: 670px; }
@@ -476,7 +521,8 @@ img {
     background-color: #131313;
     text-decoration: none;
     text-transform: uppercase;
-    color: #fff; }
+    color: #fff;
+    z-index: 3; }
     .hero__scroll-down::after {
       content: '';
       background: url(../img/arrow-down.svg) no-repeat center;
@@ -514,16 +560,52 @@ img {
   .title--primary {
     color: #E3B873; }
 
+.projects {
+  padding-top: 9.15rem;
+  padding-bottom: 6.57rem; }
+
+.swiper-slide {
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 3rem; }
+  .swiper-slide__text {
+    flex-basis: 50%;
+    margin-bottom: 2.42rem; }
+  .swiper-slide__heading {
+    font-size: 1.285rem;
+    line-height: 1.78rem;
+    font-family: 'Yeseva One', cursive;
+    color: #E3B873;
+    text-transform: uppercase;
+    margin-bottom: 0.64rem; }
+
+.swiper-pagination-bullet {
+  background-color: rgba(255, 255, 255, 0.3); }
+  .swiper-pagination-bullet-active {
+    background-color: #fff; }
+
+.swiper-button-prev, .swiper-button-next {
+  bottom: 0;
+  top: auto;
+  background-size: 42px;
+  width: 42px;
+  height: 14px; }
+  .swiper-button-prev::after, .swiper-button-next::after {
+    display: none; }
+
+.swiper-button-prev {
+  left: 0;
+  background: url(../img/projects/arrow-prev.svg) no-repeat center; }
+
+.swiper-button-next {
+  background: url(../img/projects/arrow-next.svg) no-repeat center; }
+
+.swiper-container-horizontal > .swiper-pagination-bullets {
+  width: auto;
+  bottom: 0; }
+
 .types__section-title {
   margin-bottom: 2rem; }
-
-.row {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between; }
-
-.col {
-  flex-basis: 32%; }
 
 .card__text {
   position: relative;
@@ -558,13 +640,6 @@ img {
   color: #fff;
   font-size: 1.29em;
   padding: 1.214em 2.6em; }
-
-@media screen and (max-width: 570px) {
-  .row {
-    flex-direction: column;
-    align-items: center; }
-  .types__card {
-    margin-bottom: 4.29 rem; } }
 
 .modal {
   opacity: 0;
@@ -661,7 +736,12 @@ img {
   .herobutton {
     display: block;
     min-width: 22.86rem;
-    margin-bottom: 1.85rem; } }
+    margin-bottom: 1.85rem; }
+  .row {
+    flex-direction: column;
+    align-items: center; }
+  .types__card {
+    margin-bottom: 4.29 rem; } }
 
 @media screen and (max-height: 520px) {
   .heroscroll-down {
