@@ -18,6 +18,7 @@
   "homepage": "https://github.com/ninoxin/repair-design#readme",
   "devDependencies": {
     "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.3.0",
     "gulp-sass": "^4.1.0"
   },
   "dependencies": {

@@ -1,6 +1,7 @@
 const {src, dest, watch} = require('gulp');
 const browserSync = require('browser-sync').create();
 const sass = require('gulp-sass');
+const cleanCSS = require('gulp-clean-css');
 
 // Static server
  function bs() {
@@ -25,3 +26,22 @@ const sass = require('gulp-sass');
 
 
 exports.serve = bs;
+
+function minifyCSS() {
+    return (
+        src("./css/.css")
+            .pipe(cleanCSS())
+            .pipe(dest("minified"))
+    );
+}
+
+task("minify-css", minifyCSS);
+
+task("watch", () => {
+    watch("./css/.css", minifyCSS);
+});
+
+task('default', series('minify-css', 'watch'));
+
+exports.mincss = minifyCSS;
+
