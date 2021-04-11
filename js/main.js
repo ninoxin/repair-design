@@ -10,6 +10,16 @@ $(document).ready(function () {
         modal.toggleClass('modal--visible');
     });
 
+    $(document).keyup(function (e) {
+    if (e.key === "Escape" || e.keyCode === 27) {
+        modal.toggleClass('modal--visible');
+    }
+    });
+    $('.modal').click(function (e) {
+        if ($(e.target).closest('.modal__dialog').length == 0) {
+            $(this).fadeOut();
+        }
+    });
     var mySwiper = new Swiper ('.swiper-container', {
         loop: true,
         pagination: {
