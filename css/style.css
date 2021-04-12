@@ -346,7 +346,7 @@ template {
   font-size: 1.285rem;
   color: #fff;
   padding: 0.5rem 0; }
-  .input::placeholder {
+  .input--light::placeholder {
     color: #fff; }
 
 .policy__checkbox {
@@ -423,6 +423,8 @@ img {
 
 .section-title {
   text-align: center; }
+  .section-title--light {
+    color: #fff; }
   .section-title__text {
     font-size: 1.28rem;
     line-height: 2.07rem;
@@ -430,7 +432,6 @@ img {
   .section-title--left {
     text-align: left; }
   .section-title__heading {
-    text-align: center;
     text-transform: uppercase;
     font-family: 'Yeseva One' , cursive;
     line-height: 138%; }
@@ -582,7 +583,7 @@ img {
 
 .projects {
   padding-top: 9.15rem;
-  padding-bottom: 6.57rem; }
+  padding-bottom: 36.57rem; }
 
 .swiper-slide {
   display: flex;
@@ -623,6 +624,67 @@ img {
 .swiper-container-horizontal > .swiper-pagination-bullets {
   width: auto;
   bottom: 0; }
+
+.control {
+  margin-bottom: 10.142rem; }
+  .control__video {
+    position: relative;
+    display: flex;
+    margin: auto;
+    margin-bottom: 4.428rem;
+    max-width: 58.357rem;
+    min-height: 31rem;
+    background: #131313 url(../img/video.jpg) no-repeat center;
+    box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.15); }
+    .control__video::before {
+      content: '';
+      position: absolute;
+      margin: auto;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(19, 19, 19, 0.8); }
+  .control__text {
+    max-width: 40.785rem;
+    margin: auto;
+    text-align: center;
+    font-size: 1.428rem;
+    line-height: 2.42rem;
+    margin-bottom: 4.285rem; }
+    .control__text::before {
+      content: '';
+      display: block;
+      margin: auto;
+      margin-bottom: 2.5rem;
+      width: 55px;
+      height: 2px;
+      background-color: #E3B873;
+      border-radius: 30px; }
+  .control__section-title {
+    margin-bottom: 2.214rem;
+    margin-top: -30rem; }
+  .control__form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 55rem;
+    margin: auto; }
+  .control__policy {
+    flex-basis: 100%;
+    margin-top: 1.2rem; }
+    .control__policy__label {
+      justify-content: center; }
+  .control__input-group {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 30%; }
+  .control__label {
+    margin-bottom: -7px; }
+  .control__button {
+    padding: 1.286rem 4.785rem; }
+
+.video__play {
+  position: relative;
+  margin: auto; }
 
 .types__section-title {
   margin-bottom: 2rem; }
