@@ -833,3 +833,6 @@ img {
 @media screen and (max-height: 520px) {
   .heroscroll-down {
     display: none; } }
+
+.hero__scroll-down {
+  animation-iteration-count: infinite; }

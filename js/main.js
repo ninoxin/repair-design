@@ -60,3 +60,7 @@ $(function () {
         return false;
     });
 });
+
+new WOW().init();
+
+inView('.element').once('enter', runAnimation);
