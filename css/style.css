@@ -371,12 +371,14 @@ template {
   display: none;
   position: fixed;
   bottom: 30px;
-  right: 30px;
+  left: 30px;
   z-index: 1000;
   width: 32px;
   height: 32px;
-  background: url(https://snipp.ru/img/scroll_top.png) 50% 50% no-repeat;
+  border: 3px solid #E3B873;
   border-radius: 50%;
+  background: url(../img/arrow-down.svg) 50% 50% no-repeat;
+  transform: rotate(180deg);
   opacity: 0.5; }
 
 .container {
@@ -727,6 +729,68 @@ img {
   margin-top: 8rem; }
   .design-text {
     max-width: 52.85rem; }
+
+.team {
+  padding-top: 6.785rem;
+  margin-bottom: 30rem; }
+  .team-text {
+    max-width: 32rem;
+    margin: auto;
+    text-align: center;
+    color: #fff;
+    margin-top: 1.642rem;
+    margin-bottom: 2.857rem; }
+  .team__text {
+    margin-top: 4rem; }
+  .team__card {
+    max-width: 21.92rem;
+    width: 100%;
+    position: relative;
+    padding-left: 35px;
+    padding-top: 35px; }
+    .team__card::before {
+      display: block;
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      box-shadow: 0px 5px 20px rgba(227, 184, 115, 0.5);
+      background: url(../img/team/team-icon-1.svg) no-repeat center;
+      width: 70px;
+      height: 70px; }
+    .team__card__img {
+      max-width: 100%; }
+    .team__card__title {
+      font-family: 'Yeseva One' , cursive;
+      font-size: 1.28rem;
+      line-height: 1.785rem;
+      color: #131313;
+      margin: 0;
+      padding-top: 1.57rem;
+      padding-bottom: 0.714rem;
+      text-align: center; }
+    .team__card__text {
+      position: relative;
+      margin: auto;
+      margin-top: -5.214rem;
+      max-width: 16.714rem;
+      width: 100%;
+      background-color: #fff;
+      box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.05); }
+    .team__card__experince {
+      font-family: 'Yeseva One' , cursive;
+      font-size: 1rem;
+      padding: 1rem 2.82rem;
+      text-transform: uppercase;
+      color: #fff;
+      background-color: #E3B873; }
+    .team__card__desc {
+      margin: 0;
+      text-align: center;
+      color: #959595;
+      font-size: 1.285rem;
+      line-height: 1.85rem;
+      padding-bottom: 1.714rem; }
 
 .footer {
   background: url(../img/footer-bg.jpg) no-repeat center/cover;
