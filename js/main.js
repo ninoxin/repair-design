@@ -59,9 +59,67 @@ $(function () {
         $('html, body').animate({ scrollTop: 0 }, 600);
         return false;
     });
-    
 });
 
 new WOW().init();
+// валидация форма
+$('.modal__form').validate({
+    errorClass: "invalid",
+    errorElement: "div",
+    rules: {
+        // строчное правило
+        userName: {
+            required: true,
+            minlength: 3,
+            maxlength: 15
+        },
+        userPhone: "required",
+        // правило-объект (блок)
+        userEmail: {
+            required: true,
+            email: true
+        }
+    }, // сообщения
+    messages: {
+        userName: {
+            required: "Заполните поле",
+            minlength: "Имя не короче 3 букв",
+            maxlength: "Имя не больше 15 букв"
+        },
+        userPhone: "Заполните поле",
+        userEmail: {
+            required: "Введите корректный email",
+            email: "Введите в формате: name@domain.com"
+        }
+    },
+});
 
-inView('.element').once('enter', runAnimation);
+$('.controlform').validate({
+    errorClass: "invalid",
+    errorElement: "div",
+    rules: {
+        // строчное правило
+        userName: {
+            required: true,
+            minlength: 3,
+            maxlength: 15
+        },
+        userPhone: "required",
+        // правило-объект (блок)
+        userEmail: {
+            required: "Введите корректный email",
+            email: true
+        }
+    }, // сообщения
+    messages: {
+        userName: {
+            required: "Заполните поле",
+            minlength: "Имя не короче 3 букв",
+            maxlength: "Имя не больше 15 букв"
+        },
+        userPhone: "Телефон обезателен",
+    },
+});
+
+// маски
+$('[type=tel]').mask('+7(000)000-00-00', { placeholder: "+7(___)__-__-___" });

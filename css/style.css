@@ -342,6 +342,7 @@ template {
 .input {
   background-color: transparent;
   border: none;
+  outline: none;
   border-bottom: 1px solid rgba(54, 54, 54, 0.3);
   font-size: 1.285rem;
   color: #fff;
@@ -375,10 +376,10 @@ template {
   z-index: 1000;
   width: 32px;
   height: 32px;
-  border: 3px solid #E3B873;
+    height-border: 3px solid #E3B873;
   border-radius: 50%;
   background: url(../img/arrow-down.svg) 50% 50% no-repeat;
-  transform: rotate(180deg);
+    background-transform: rotate(180deg);
   opacity: 0.5; }
 
 .container {
@@ -670,6 +671,10 @@ img {
     justify-content: space-between;
     max-width: 55rem;
     margin: auto; }
+  .control__input {
+    color: #131313; }
+    .control__input::placeholder {
+      color: #131313; }
   .control__policy {
     flex-basis: 100%;
     margin-top: 1.2rem; }
@@ -881,12 +886,22 @@ img {
     font-size: 1.07rem; }
   .modal__input {
     margin-bottom: 3.482rem; }
+    .modal__input-group {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 1rem; }
     .modal__input:last-of-type {
       margin-bottom: 1rem; }
   .modal__policy {
     margin-bottom: 2.7rem; }
   .modal__button {
     align-self: flex-end; }
+
+label.invalid {
+  color: red; }
+
+input.invalid {
+  border-bottom: 1px solid red; }
 
 @media screen and (max-width: 1200px) {
   html {
