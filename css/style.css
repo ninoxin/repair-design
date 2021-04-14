@@ -376,10 +376,10 @@ template {
   z-index: 1000;
   width: 32px;
   height: 32px;
-    height-border: 3px solid #E3B873;
+  border: 3px solid #E3B873;
   border-radius: 50%;
   background: url(../img/arrow-down.svg) 50% 50% no-repeat;
-    background-transform: rotate(180deg);
+  transform: rotate(180deg);
   opacity: 0.5; }
 
 .container {
@@ -839,6 +839,9 @@ img {
   .footer__menu {
     background-color: #131313;
     padding: 4.285rem 0; }
+  .footer__map {
+    min-height: 465px;
+    margin-bottom: 4rem; }
 
 .modal {
   opacity: 0;
