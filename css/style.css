@@ -860,6 +860,21 @@ img {
   background: url(../img/footer-bg.jpg) no-repeat center/cover;
   display: flex;
   flex-direction: column; }
+  .footer__section-title {
+    position: relative;
+    margin-top: 2.5rem;
+    max-width: 589px;
+    margin: auto;
+    color: #E3B873; }
+  .footer__link__phone {
+    color: #E3B873;
+    text-decoration: none; }
+  .footer__icon {
+    max-width: 5.0714rem;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 3.142rem; }
   .footer__wrap {
     background: #181818;
     max-width: 63.07rem;
