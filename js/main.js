@@ -11,16 +11,16 @@ $(document).ready(function () {
     });
 
     $(document).keyup(function (e) {
-    if (e.key === "Escape" || e.keyCode === 27) {
-        modal.toggleClass('modal--visible');
-    }
+        if (e.key === "Escape" || e.keyCode === 27) {
+            modal.toggleClass('modal--visible');
+        }
     });
     $('.modal').click(function (e) {
         if ($(e.target).closest('.modal__dialog').length == 0) {
             $(this).fadeOut();
         }
     });
-    var mySwiper = new Swiper ('.swiper-container', {
+    var mySwiper = new Swiper('.swiper-container', {
         loop: true,
         pagination: {
             el: '.swiper-pagination',
@@ -42,7 +42,7 @@ $(document).ready(function () {
 
 $(function () {
     $('.hero__scroll-down').click(function () {
-        $('html, body').animate({ scrollTop: $(document).height() - $(window).height() }, 600);
+        $('html, body').animate({ scrollTop: $(document).height() - $(window).height() }, 1000);
         return false;
     });
 });
@@ -56,13 +56,15 @@ $(function () {
     });
 
     $('.scroll_top').click(function () {
-        $('html, body').animate({ scrollTop: 0 }, 600);
+        $('html, body').animate({ scrollTop: 0 }, 1000);
         return false;
     });
 });
 
 new WOW().init();
+
 // валидация форма
+var modal = $('.modal');
 $('.modal__form').validate({
     errorClass: "invalid",
     errorElement: "div",
@@ -92,6 +94,22 @@ $('.modal__form').validate({
             email: "Введите в формате: name@domain.com"
         }
     },
+    submitHandler: function (form) {
+        $.ajax({
+            type: "POST",
+            url: "send.php",
+            data: $(form).serialize(),
+            success: function (response) {
+                console.log('Ajax работает');
+                alert('Форма отправлена, мы свяжемся с вами через   10 минут');
+                $(form)[0].reset();
+                modal.removeClass('modal--visible');
+            },
+            error: function (response) {
+                console.error('Ошибка запроса ' + response);
+            }
+        });
+    }
 });
 
 $('.controlform').validate({
@@ -147,12 +165,11 @@ ymaps.ready(function () {
             // Своё изображение иконки метки.
             iconImageHref: '../img/map-icon.svg',
             // Размеры метки.
-            iconImageSize: [30, 42],
+            iconImageSize: [30, 30],
             // Смещение левого верхнего угла иконки относительно
             // её "ножки" (точки привязки).
             iconImageOffset: [-5, -38]
         });
     myMap.geoObjects
-        .add(myPlacemark)
-        .add(myPlacemarkWithContent);
+        .add(myPlacemark);
 });
