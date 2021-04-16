@@ -10,14 +10,16 @@ $(document).ready(function () {
         modal.toggleClass('modal--visible');
     });
 
+    // пропадает при нажатии на Esc
     $(document).keyup(function (e) {
-        if (e.key === "Escape" || e.keyCode === 27) {
-            modal.toggleClass('modal--visible');
+        if (e.key === "Escape") {
+            modal.removeClass('modal--visible');
         }
     });
-    $('.modal').click(function (e) {
-        if ($(e.target).closest('.modal__dialog').length == 0) {
-            $(this).fadeOut();
+    // Скрывает модальное окно при нажатии вне него
+    $(document).click(function (event) {
+        if ($(event.target).is('.modal')) {
+            modal.toggleClass('modal--visible');
         }
     });
     var mySwiper = new Swiper('.swiper-container', {
