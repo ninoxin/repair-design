@@ -1,14 +1,23 @@
+@media screen and ( max-width: 1440px  )
+  html
+    font-size: 16px
+  .hero__content
+    margin-left: 100px
+  .client__result
+    max-width: 22rem
+  .card__text
+    max-width: 21.6rem
 @media screen and ( max-width: 1200px  )
   html
     font-size: 12px
   .nav
-    &item
+    &__item
       margin-left: 1rem
 @media screen and ( max-width: 992px  )
   .hero
-    &instagram
+    &__instagram
       display: none
-    &content
+    &__content
       margin-left: 0
   .nav
     display: none
@@ -16,31 +25,33 @@
   .row
     flex-direction: column
     align-items: center
+  .col-50
+    width: 100%
   .types
-    &card
+    &__card
       margin-bottom: 4.28rem
     .card
-      &text
+      &__text
         margin-left: 0
 @media screen and ( max-width: 570px  )
   .contacts
-    &phone
+    &__phone
       margin-right: 0
       color: $light
       text-decoration: none
-    &button
+    &__button
       display: none
   .title
     font-size: 1.64rem
   .hero
-    &scroll-down
+    &__scroll-down
       display: none
-    &content
+    &__content
       max-width: 22.86rem
-    &text
+    &__text
       font-size: 1.29rem
       margin-bottom: 2.28rem
-    &button
+    &__button
       display: block
       min-width: 22.86rem
       margin-bottom: 1.85rem
@@ -54,3 +65,61 @@
   .hero
     &scroll-down
       display: none
+  .instagram
+    display: none
+@media screen and ( max-width: 376px )
+  .header
+  .hero
+    padding: 0
+    &__content
+      margin: auto
+      max-width: 24.214rem
+  .instagram, .contacts__button
+    display: none
+  .contacts__phone
+    margin: 0
+  .menu
+    align-items: center
+    justify-content: space-around
+    margin: auto
+  .section-title__text
+    max-width: 40rem
+    width: 100%
+  .swiper-slide
+    margin-top: 2.428rem
+  .projects
+    padding-top: 0
+    padding-bottom: 30.57rem
+  .video__play
+    width: 100px
+  .control
+    background-color: $dark
+    color: $light
+    &__button
+      margin-top: 3rem
+      margin-bottom: -2rem
+      order: 4
+    &__input-group
+      margin-bottom: 2rem
+    &__policy
+      margin-top: -1rem
+      display: flex
+    &__form
+      flex-direction: column
+    &__input
+      &::placeholder
+        color: $light
+  .team
+    padding-top: 4.14rem
+    &__card
+      margin-bottom: 6.42rem
+    &__text
+      display: none
+  .client , .footer__menu
+    display: none
+  .footer 
+    margin-top: 15rem
+    &__input-group
+      flex-basis: 100%
+    &__button
+      width: 100%
