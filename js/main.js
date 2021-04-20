@@ -36,9 +36,14 @@ $(document).ready(function () {
     var next = $('.swiper-button-next');
     var prev = $('.swiper-button-prev');
     var bullets = $('.swiper-pagination');
+    var nextS = $('.swiper-next');
+    var prevS = $('.swiper-prev');
+    var bulletsS = $('.swiper-pagination-s');
 
-    next.css('left', prev.width() + 10 + bullets.width() + 10)
     bullets.css('left', prev.width() + 10)
+    next.css('left', prev.width() + 10 + bullets.width() + 10)
+    bulletsS.css('left', prevS.width() + 10)
+    nextS.css('left', prevS.width() + 10 + bulletsS.width() + 10)
 });
 
 
@@ -114,7 +119,7 @@ $('.modal__form').validate({
     }
 });
 
-$('.controlform').validate({
+$('.control__form').validate({
     errorClass: "invalid",
     errorElement: "div",
     rules: {
@@ -140,7 +145,38 @@ $('.controlform').validate({
         userPhone: "Телефон обезателен",
     },
 });
-
+$('.footer__form').validate({
+    errorClass: "invalid",
+    errorElement: "div",
+    rules: {
+        // строчное правило
+        userName: {
+            required: true,
+            minlength: 3,
+            maxlength: 15
+        },
+        userQuestion: {
+            required: true,
+            minlength: 10,
+            maxlength: 150
+        },
+        userPhone: "required",
+        // правило-объект (блок)
+        userEmail: {
+            required: "Введите корректный email",
+            email: true
+        }
+    }, // сообщения
+    messages: {
+        userName: {
+            required: "Заполните поле",
+            minlength: "Имя не короче 3 букв",
+            maxlength: "Имя не больше 15 букв"
+        },
+        userPhone: "Телефон обезателен",
+        userQuestion: "Вопросик не забудь",
+    },
+});
 // маски
 $('[type=tel]').mask('+7(000)000-00-00', { placeholder: "+7(___)__-__-___" });
 
