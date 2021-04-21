@@ -21,7 +21,18 @@
       margin-left: 0
   .nav
     display: none
+  .contacts__phone
+    margin-right: 3.12rem
+  .card__text 
+    max-width: 20.6rem
 @media screen and ( max-width: 760px )
+  .title
+    font-size: 30px
+    &__hero
+      max-width: 30rem
+  .hero
+    &__text
+      font-size: 20px
   .row
     flex-direction: column
     align-items: center
@@ -30,10 +41,26 @@
   .types
     &__card
       margin-bottom: 4.28rem
-    .card
-      &__text
-        margin-left: 0
+  .card
+    &__text
+      margin-left: 0
+  .projects
+    padding-top: 3rem
+  .swiper-slide
+    margin-top: 2.428rem
+  .control
+    margin-bottom: 5rem
+  .steps
+    display: none
+  .team
+    margin-top: 0
+    &__section-title , &-text
+      color: $dark
+    &__card
+      margin-bottom: 3rem
 @media screen and ( max-width: 570px  )
+  .video__play
+    max-width: 100px
   .contacts
     &__phone
       margin-right: 0
@@ -60,15 +87,14 @@
       align-items: center
   .types
       &__card
-          margin-bottom: 4.29 rem
+          margin-bottom: 4.29rem
 @media screen and ( max-height: 520px  )
   .hero
-    &scroll-down
+    &__scroll-down
       display: none
   .instagram
     display: none
 @media screen and ( max-width: 376px )
-  .header
   .hero
     padding: 0
     &__content
@@ -92,6 +118,13 @@
     padding-bottom: 30.57rem
   .video__play
     width: 100px
+  .design
+    background-color: $dark
+    &__section-title
+      padding-top: 3rem
+      color: $light
+    &-text
+      color: $light
   .control
     background-color: $dark
     color: $light
@@ -100,7 +133,7 @@
       margin-bottom: -2rem
       order: 4
     &__input-group
-      margin-bottom: 2rem
+      margin-bottom: 4rem
     &__policy
       margin-top: -1rem
       display: flex
@@ -109,8 +142,16 @@
     &__input
       &::placeholder
         color: $light
+    &__video
+      min-height: 207px
+  .video__play
+    width: 67px
   .team
+    background-color: $dark
     padding-top: 4.14rem
+    margin-bottom: 0
+    &__section-title , &-text
+      color: $light
     &__card
       margin-bottom: 6.42rem
     &__text
@@ -118,8 +159,12 @@
   .client , .footer__menu
     display: none
   .footer 
-    margin-top: 15rem
+    margin-top: 0rem
+    background: $dark
     &__input-group
       flex-basis: 100%
     &__button
       width: 100%
+    &__wrap
+      margin-top: 0
+      background: $dark

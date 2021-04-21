@@ -46,11 +46,22 @@ $(document).ready(function () {
     nextS.css('left', prevS.width() + 10 + bulletsS.width() + 10)
 });
 
-
 $(function () {
     $('.hero__scroll-down').click(function () {
-        $('html, body').animate({ scrollTop: $(document).height() - $(window).height() }, 1000);
+        $('html, body').animate({ scrollTop: $(window).height() }, 1000);
         return false;
+    });
+});
+$(document).ready(function () {
+    $(".nav").on("click", "a", function (event) {
+        //отменяем стандартную обработку нажатия по ссылке
+        event.preventDefault();
+        //забираем идентификатор бока с атрибута href
+        var id = $(this).attr('href'),
+            //узнаем высоту от начала страницы до блока на который ссылается якорь
+            top = $(id).offset().top;
+        //анимируем переход на расстояние - top за 1500 мс
+        $('body,html').animate({ scrollTop: top }, 1500);
     });
 });
 $(function () {
@@ -182,8 +193,9 @@ $('[type=tel]').mask('+7(000)000-00-00', { placeholder: "+7(___)__-__-___" });
 
 ymaps.ready(function () {
     var myMap = new ymaps.Map('map', {
-        center: [5.751574, 37.573856],
-        zoom: 9
+        center: [53.243563, 34.363413],
+        zoom: 15,
+        controls: []
     }, {
         searchControlProvider: 'yandex#search'
     }),
@@ -194,6 +206,7 @@ ymaps.ready(function () {
         ),
 
         myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+
             hintContent: 'Наш офис',
             balloonContent: 'Вход со двора'
         }, {
